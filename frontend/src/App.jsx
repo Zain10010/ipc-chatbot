@@ -15,7 +15,7 @@ import {
   AlertCircle
 } from 'lucide-react';
 
-const API_BASE = 'http://127.0.0.1:8000/api';
+const API_BASE = 'https://zain05-ipc-chatbot.hf.space/api';
 
 const getErrorMessage = (err, defaultMsg) => {
   if (err.response && err.response.data && err.response.data.detail) {
