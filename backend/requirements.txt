@@ -4,6 +4,6 @@ pypdf
 langchain-text-splitters
 langchain-community
 langchain-groq
-sentence-transformers
+fastembed
 faiss-cpu
 python-dotenv

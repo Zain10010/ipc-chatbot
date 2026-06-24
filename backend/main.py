@@ -9,7 +9,7 @@ from typing import List, Dict
 from pypdf import PdfReader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings.fastembed import FastEmbedEmbeddings
 from langchain_groq import ChatGroq
 
 from dotenv import load_dotenv
@@ -46,7 +46,7 @@ def initialize_db():
     )
     
     print("Initializing Embeddings...")
-    embeddings = HuggingFaceEmbeddings(
+    embeddings = FastEmbedEmbeddings(
         model_name="sentence-transformers/all-MiniLM-L6-v2"
     )
 
