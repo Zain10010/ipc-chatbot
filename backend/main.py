@@ -32,8 +32,14 @@ vector_store = None
 llm = None
 chat_history = []
 
-DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "ipc_faiss_db")
-PDF_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "ipc.pdf")
+BASE_DIR = os.path.dirname(__file__)
+if os.path.basename(BASE_DIR) == "backend":
+    PROJECT_ROOT = os.path.dirname(BASE_DIR)
+else:
+    PROJECT_ROOT = BASE_DIR
+
+DB_PATH = os.path.join(PROJECT_ROOT, "ipc_faiss_db")
+PDF_PATH = os.path.join(PROJECT_ROOT, "ipc.pdf")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 def initialize_db():
