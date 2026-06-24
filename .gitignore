@@ -1,0 +1,22 @@
+# Environment variables
+.env
+*.env
+backend/.env
+
+# Python caching
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Node dependencies
+node_modules/
+frontend/node_modules/
+
+# Local FAISS database (heavy file, can be rebuilt)
+ipc_faiss_db/
+
+# OS files
+.DS_Store
+Thumbs.db
